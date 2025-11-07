@@ -29,20 +29,27 @@ body {
 
 
 .video-background-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Ilalagay ito sa pinakalikod */
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
     overflow: hidden;
 }
 
 #home-video-bg {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para puno ang screen */
+    object-fit: cover; 
 }
+
+#projects-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
 
 .video-overlay {
     position: absolute;
@@ -50,7 +57,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Overlay para dumilim (pwede mong i-adjust 'yung 0.6) */
+    background-color: rgba(0, 0, 0, 0.6); 
 }
 
 .header {
@@ -128,6 +135,7 @@ section{
     padding: 10rem 15%;
 }
 .home {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,8 +278,8 @@ section{
 }
 
 .services {
-    background-color: var(--bg-color);
     color: black;
+    background: var(--second-bg-color);
 }
 
 .services h2 {
@@ -331,7 +339,7 @@ section{
 }
 
 .projects {
-    background-color: var(--second-bg-color);
+    position: relative;
 }
 
 .projects-box {
@@ -580,7 +588,7 @@ svg{
 .slider .list .item.active ~ .item .content h2{
     transform: translateY(100%);
 }
-/* arrows */
+
 .arrows{
     position: absolute;
     left: 50%;
@@ -684,7 +692,7 @@ svg{
     border: 2px solid #ffffff10;
     backdrop-filter: blur(50px);
     border: 2px solid #ffffff50;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 .kc-org-col-box:hover {
@@ -699,7 +707,7 @@ svg{
     background-color: rgba(255, 255, 255, 0.15);
     border: 2px solid #ffffff10;
     backdrop-filter: blur(50px);
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     
 }
 
