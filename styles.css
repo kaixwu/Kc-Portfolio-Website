@@ -277,6 +277,12 @@ section{
     margin: 5rem 0;
 }
 
+.heading-medium {
+    text-align: center;
+    font-size: 5rem;
+    margin: 3rem 0;
+}
+
 .services {
     color: black;
     background: var(--second-bg-color);
@@ -448,7 +454,10 @@ section{
 
 
 svg{
-    color: #fff;
+    color: white;
+    font-size: 2em;
+    background-color: var(--main-color);
+    border-radius: 1em;
 }
 
 .logo img{
@@ -490,15 +499,13 @@ svg{
 }
 .slider .list .item .content h2{
     font-size: 10em;
-    font-family: 'Bebas Neue', sans-serif;
     line-height: 0.9em;
     transform: translateY(-100%);
     transition: transform 1s;
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.slider .list .item .content p{
-}
+
 .slider .list .item .content p:last-child{
     display: flex;
     justify-content: start;
@@ -601,6 +608,7 @@ svg{
 .arrows button{
     all: unset;
     cursor: pointer;
+
 }
 .slider .list::after{
     position: absolute;
@@ -610,7 +618,7 @@ svg{
     height: 70%;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(assets/img/model.png);
+    background-image: url(assets/img/model.webp);
     background-size: cover;
     background-position: top;
     pointer-events: none;
@@ -634,7 +642,7 @@ svg{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(assets/img/milad-fakurian-Oi_oaJk3qlo-unsplash.jpg) center;
+    background-image: linear-gradient(to bottom, transparent, #ea580c);
     background-size: cover;
 }
 
@@ -725,6 +733,89 @@ svg{
     background-position: center;
 }
 
+.faq-interview {
+    min-height: 80vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.faq-container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.faq {
+    background-color: #fdfdfd;
+    border-radius: 1em;
+    padding: 30px;
+    position: relative;
+}
+
+.faq-title {
+    margin-right: 3em;
+    color: black;
+    font-size: 1.7rem;
+}
+
+.faq-text {
+    text-align: left;
+    margin: 2em 0 0;
+    display: none;
+    color: black;
+    font-size: 1.25rem;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+i {
+    font-size: 2em;
+}
+
+.faq-toggle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+    top: 30px;
+    right: 30px;
+    background-color: rgb(150, 60,247);
+    color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.faq-toggle:hover {
+    transform: scale(1.05);
+}
+
+.faq-toggle .bx-x {
+    display: none;
+}
+
+.faq.active .faq-toggle .bx-x {
+    display: block;
+}
+
+.faq.active .faq-toggle .bxs-chevron-down {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: #ff0000;
+}
 
 @media(max-width:1285px) {
     #menu-icon{
@@ -790,6 +881,9 @@ svg{
     }
 }
 
+
+
+
 @media all and (max-width: 1024px) {
     .slider .list .item .content{
         grid-template-columns: repeat(2, 300px);
@@ -829,6 +923,7 @@ svg{
         flex: 2;
         flex-direction: column;
     }
+
 }
 
 
@@ -846,4 +941,6 @@ svg{
     .kc-org-col {
         gap: 0.5em;
     }
+
+
 }

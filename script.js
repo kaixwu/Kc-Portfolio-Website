@@ -1,11 +1,15 @@
+// for clicking the toggle of menu in mobile and tablet devices
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
+
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x')
     navbar.classList.toggle('active');
 }
 
+
+// for slider functionality
 let items = document.querySelectorAll('.slider .list .item');
 let prevBtn = document.getElementById('prev');
 let nextBtn = document.getElementById('next');
@@ -33,7 +37,7 @@ const setSlider = () => {
 }
 setSlider();
 
-// set diameter
+
 const setDiameter = () => {
     let slider = document.querySelector('.slider');
     let widthSlider = slider.offsetWidth;
@@ -44,4 +48,13 @@ const setDiameter = () => {
 setDiameter();
 window.addEventListener('resize', () => {
     setDiameter();
+})
+
+// for frequently asked questions' toggle functionality
+const toggles = document.querySelectorAll(".faq-toggle");
+
+toggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+        toggle.parentNode.classList.toggle("active");
+    })
 })

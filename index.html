@@ -21,9 +21,9 @@
 
         <nav class="navbar">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
+             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -32,7 +32,7 @@
     </header>
 
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="video-background-container">
             <video autoplay muted loop playsinline id="home-video-bg">
                 <source src="assets/vids/home-abstract-vid-background.mp4" type="video/mp4"> <!-- Sourced from: https://www.vecteezy.com/free-videos/loop" by Vecteezy -->
@@ -60,19 +60,16 @@
                     <i class="bx bxl-instagram-alt"></i>
                 </a>
                 
-                <a href="#">
-                    <i class="bx bxl-twitter"></i>
-                </a>
             </div>
 
             <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
+                <a href="" class="btn">View Kc's Resume</a>
                 <a href="#contact" class="btn">Contact</a>
             </div>
         </div>
 
         <div class="home-img">
-            <img src="image.jpg" alt="">
+            <img src="assets/img/kc-img-2.jpg" alt="">
         </div>
 
     </section>
@@ -87,7 +84,7 @@
             <div class="service-box">
                 <div class="service-info">
                     <i class="bx bxl-figma"></i>
-                    <h4>UI / UX Design</h4>
+                    <h4>Graphic Design</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 </p> 
@@ -97,7 +94,7 @@
             <div class="service-box">
                 <div class="service-info">
                     <i class="bx bx-code"></i>
-                    <h4>Frontend Development</h4>
+                    <h4>Wordpress Development</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 </p> 
@@ -107,7 +104,7 @@
              <div class="service-box">
                 <div class="service-info">
                     <i class="bx bx-code-curly"></i>
-                    <h4>Backend Development</h4>
+                    <h4>Website Development</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 </p> 
@@ -162,7 +159,7 @@
      <section class="about" id="about">
        
         <div class="about-img">
-            <img src="image.jpg" alt="">
+            <img src="assets/img/kc-img-1.jpg" alt="">
         </div>
 
         <div class="about-content"> 
@@ -178,39 +175,21 @@
     <section class="slider">
             <div class="list">
                 <div class="item active">
-                    <div class="image" style="--url: url('assets/img/1.jpg')"></div>
+                    <div class="image" style="--url: url('assets/img/destination-japan.webp')"></div> <!-- Source: https://explore-live.s3.eu-west-1.amazonaws.com/medialibraries/explore/explore-media/destinations/asia/japan/japan-banner.jpg?ext=.jpg&width=1920&format=webp&quality=80&v=201704211523-->
                     <div class="content">
-                        <h2>DREAM DESTINATION: JAPAN</h2>
-                        <p>
-                            Nulla magna irure incididunt irure nisi laboris adipisicing adipisicing ad aliquip exercitation sit duis.
-                        </p>
-                        <p>
-                            Ex irure minim eiusmod tempor cillum consectetur ullamco.
-                        </p>
+                        <h2>DREAM DESTINATION: <span>JAPAN</span></h2>
                     </div>
                 </div>
                 <div class="item ">
-                    <div class="image" style="--url: url('assets/img/2.jpg')"></div>
+                    <div class="image" style="--url: url('assets/img/destination-new-zealand.jpg')"></div> <!-- Source: https://vj-prod-website-cms.s3.ap-southeast-1.amazonaws.com/agjfkj-1750404512118.jpg-->
                     <div class="content">
-                        <h2>DREAM DESTINATION: KOREA</h2>
-                        <p>
-                            Nulla magna irure incididunt irure nisi laboris adipisicing adipisicing ad aliquip exercitation sit duis.
-                        </p>
-                        <p>
-                            Ex irure minim eiusmod tempor cillum consectetur ullamco.
-                        </p>
+                        <h2>DREAM DESTINATION: <span>NEW ZEALAND</span></h2>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="image" style="--url: url('assets/img/3.jpg')"></div>
+                    <div class="image" style="--url: url('assets/img/destination-taiwan.jpg')"> </div> <!-- Source: https://assets.zeezest.com/blogs/PROD_Deep%20Dive%20Into%20The%20Vibrancy%20Of%20Taiwan%20Best%20Places%20To%20Visit%20In%20Taiwan_1727663466926.jpg-->
                     <div class="content">
-                        <h2>DREAM DESTINATION: TAIWAN</h2>
-                        <p>
-                            Nulla magna irure incididunt irure nisi laboris adipisicing adipisicing ad aliquip exercitation sit duis.
-                        </p>
-                        <p>
-                            Ex irure minim eiusmod tempor cillum consectetur ullamco.
-                        </p>
+                        <h2 class="heading-medium">DREAM DESTINATION: <span>TAIWAN</span></h2>
                     </div>
                 </div>
             </div>
@@ -228,7 +207,9 @@
             </div>
         </section>
 
+        
         <section class="kc-organizations"> 
+            
             <div class="kc-org-container">
 
                 <div class="kc-org-row kc-org-row-1">
@@ -269,18 +250,87 @@
 
         </section>
 
-        <section class="faq-interview">
+        <section class="faq-interview" id="faq">
+            <h2 class="heading-medium"><span>Frequently</span> Asked Questions</h2>
             <div class="faq-container">
                 
                 <div class="faq active">
                     <h3 class="faq-title">
-                        What is the return policy?
+                        Your resume lists a lot of leadership and writing experience. How does that make you a better developer?
                     </h3>
                     <p class="faq-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        My leadership and writing roles have been essential to my development work. As a News Writer before in an academic organization, Vox Nova,
+                        I had to research complex topics and communicate them clearly and accurately — which is exactly what's 
+                        needed when translating a client's idea into a technical 
+                        specification or explaining progress.
+                        <br>
+                        <br>
+                        My experience in leadership, like being Class President and on the Secretariat for the Sipnayan Club, 
+                        taught me time management, documentation, and team coordination. Balancing academics with these roles has 
+                        made me very organized, which is how I've successfully managed freelance deadlines alongside my college studies.
                     </p>
+
+                    <button class="faq-toggle">
+                        <i class="bx bxs-chevron-down"></i>
+                        <i class="bx bx-x"></i>
+                    </button>
+
                 </div>
+
+                <div class="faq">
+                    <h3 class="faq-title">
+                        Working as an ESL teacher for a short period influenced you in what way?
+                    </h3>
+                    <p class="faq-text">
+                        I took that role to build my communication skills in a different environment. While I value the experience, I 
+                        learned very quickly that my real passion and long-term career path is in tech. <br><br>Around that same time, my 
+                        freelance development work was starting to grow. I made the decision to dedicate my full focus to my studies and 
+                        to building my skills as a web developer, which is where I've been focused ever since.
+                    </p>
+
+                    <button class="faq-toggle">
+                        <i class="bx bxs-chevron-down"></i>
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+
+                <div class="faq">
+                    <h3 class="faq-title">
+                        Your overview mentions a 'logical approach' from your Science and Math background. How do you apply that to web development?
+                    </h3>
+                    <p class="faq-text">
+                        I'm very systematic. I treat a bug like a puzzle. I don't just start guessing. I will use the dev tools, 
+                        inspect the element, and check the console. That's where I find the first clue. From there, 
+                        it's a process of elimination. I'll test one idea, like, 'Did I misspell my CSS class name?' or 
+                        'Is there a typo in my HTML tag?' If that's not it, I'll check my JavaScript to see if I'm even selecting the right element. <br><br>
+                        This methodical way of thinking comes from my background in science and math, and it helps me find the actual
+                         problem fast instead of wasting time.
+                    </p>
+
+                    <button class="faq-toggle">
+                        <i class="bx bxs-chevron-down"></i>
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+
+                <div class="faq">
+                    <h3 class="faq-title">
+                        How do you stay up-to-date with new web technologies while you're focused on school and freelance work?
+                    </h3>
+                    <p class="faq-text">
+                        I'm a big believer in continuous learning. On top of following tech blogs and YouTube channels, 
+                        I'm actively working through structured curricula on freeCodeCamp and The Odin Project to build a deep, solid foundation. <br><br>
+                        But for me, the most important step is applying it. If I learn about a new tool or CSS feature,
+                        I'll immediately try to build a small personal project with it. That hands-on approach is 
+                        how I make sure I actually understand a new technology, not just know what it is.
+                    </p>
+
+                    <button class="faq-toggle">
+                        <i class="bx bxs-chevron-down"></i>
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+
             </div>
         </section>
 
@@ -322,14 +372,11 @@
                     <i class="bx bxl-instagram-alt"></i>
                 </a>
                 
-                <a href="#">
-                    <i class="bx bxl-twitter"></i>
-                </a>
             </div>
  
             <ul class="list">
                 <li> 
-                    <a href="#">FAQ</a>
+                    <a href="#faq">FAQ</a>
                 </li>
 
                 <li> 
