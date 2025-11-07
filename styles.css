@@ -457,18 +457,10 @@ section{
 }
 
 
-
-
-
 svg{
     color: white;
-    font-size: 2em;
     background-color: var(--main-color);
     border-radius: 1em;
-}
-
-.logo img{
-    width: 50px;
 }
 
 .slider{
@@ -965,12 +957,18 @@ i {
             overflow: hidden;
             padding: 5rem 15%; 
             box-sizing: border-box;
-
-         
-            background-image: url('assets/img/kc-best-sales-hero-background.webp'); 
+            
             background-size: cover;
             background-position: center;
         }
+        #project-hero-kc-best-sales {
+            background-image: url('assets/img/kc-best-sales-hero-background.webp'); 
+        }
+        
+        #project-hero-airlive {
+            background-image: url('assets/img/airlive-coms-hero-background.webp'); 
+        }
+
         .project-hero::before { 
             content: '';
             position: absolute;
