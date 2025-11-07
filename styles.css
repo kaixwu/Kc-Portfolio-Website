@@ -886,7 +886,308 @@ i {
     .contact form {
         flex-direction: column;
     }
+
+    .back-button-container {
+                top: 10rem;
+                left: 5%;
+            }
+            .project-hero, .project-details, .key-features, .project-nav {
+                padding: 10rem 5%;
+            }
+            .project-sidebar {
+                display: none;
+            }
 }
+
+
+        .project-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 4%; 
+            transform: translateY(-50%);
+            z-index: 999;
+                   
+        }
+        .project-sidebar ul { list-style: none; padding: 0; margin: 0; }
+        .project-sidebar li { margin-bottom: 1.5rem; }
+        .project-sidebar a {
+            font-size: 1.6rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+            transition: 0.3s ease;
+        }
+        .project-sidebar a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--main-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-out;
+        }
+        .project-sidebar a:hover::after,
+        .project-sidebar a.active-link::after {
+            transform: scaleX(1);
+        }
+        .project-sidebar a:hover,
+        .project-sidebar a.active-link {
+            color: var(--main-color);
+        }
+
+        .back-button-container {
+            position: absolute;
+            top: 18rem;
+            left: 15%;
+            z-index: 100;
+        }
+        .back-button-container .btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+  
+        .project-hero {
+            height: 70vh;
+            position: relative;
+            display: flex;
+            justify-content: flex-start; 
+            align-items: flex-end;
+            text-align: left;
+            overflow: hidden;
+            padding: 5rem 15%; 
+            box-sizing: border-box;
+
+         
+            background-image: url('assets/img/destination-japan.webp'); 
+            background-size: cover;
+            background-position: center;
+        }
+        .project-hero::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 1;
+        }
+        .project-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .project-hero-content .heading {
+            text-align: left;
+            margin: 0;
+            font-size: 8rem; 
+        }
+        .project-subtitle {
+            font-size: 2.2rem;
+            font-weight: 300;
+            margin-top: 1.5rem;
+        }
+        .project-hero .btn {
+             margin-top: 3rem;
+        }
+
+      
+        .project-details {
+            background: var(--second-bg-color);
+            padding: 10rem 15%;
+            min-height: auto; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .project-details .heading {
+             margin-bottom: 6rem;
+        }
+        .project-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            position: relative; 
+            z-index: 2;
+        }
+        .project-info-box h3 {
+            font-size: 3rem;
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--main-color);
+        }
+        .project-info-box h3.extra-margin-top {
+            margin-top: 4rem;
+        }
+        .project-info-box p {
+            font-size: 1.6rem;
+            line-height: 1.7;
+        }
+        
+       
+        .tech-stack-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .tech-stack-icons i {
+            font-size: 4rem;
+            color: var(--text-color);
+            transition: 0.3s ease;
+        }
+        .tech-stack-icons i:hover {
+            color: var(--main-color);
+            transform: translateY(-5px);
+        }
+        
+        .tech-accordion {
+            background-color: #fdfdfd;
+            border-radius: 1em;
+            padding: 20px 30px; 
+            position: relative;
+            margin-bottom: 1em;
+            transition: transform 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .tech-accordion:not(.active):hover {
+             transform: scale(1.02); 
+             border-color: var(--main-color);
+        }
+        .tech-accordion .tech-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .tech-accordion .tech-title {
+            color: black;
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+        .tech-accordion .tech-toggle {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            height: 30px;
+            width: 30px;
+            background-color: rgb(150, 60, 247);
+            color: white;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            flex-shrink: 0;
+        }
+        .tech-accordion .tech-toggle i { font-size: 1.8rem; }
+        .tech-accordion .tech-toggle .bx-x { display: none; }
+        .tech-accordion .tech-toggle .bxs-chevron-down { display: block; }
+
+        .tech-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .tech-content-inner {
+            padding-top: 2rem;
+        }
+        .tech-content-inner p {
+            color: black;
+            font-size: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .tech-accordion.active .tech-content { max-height: 500px; }
+        .tech-accordion.active .tech-toggle .bx-x { display: block; }
+        .tech-accordion.active .tech-toggle .bxs-chevron-down { display: none; }
+        .tech-accordion.active .tech-toggle { background-color: #ff0000; }
+
+        
+        .key-features {
+            padding: 10rem 15%;
+            background: var(--second-bg-color);
+            position: relative; 
+            overflow: hidden;
+        }
+        
+       
+      
+        .parallax-bg {
+            background-image: url('assets/img/kc-best-sales-background.jpg');
+            background-size: cover;
+            background-position: center center; 
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -20%; 
+            left: 0;
+            width: 100%;
+            height: 140%; 
+            z-index: 1;
+            opacity: 0.9;
+        }
+        
+       
+        .video-walkthrough-container {
+            position: relative; 
+            z-index: 2;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 3px solid var(--main-color);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .video-walkthrough-container video {
+            width: 100%;
+            display: block; 
+        }
+
+        
+        .project-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem 15%;
+            background: var(--second-bg-color);
+        }
+        .project-nav .btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: 0.3s ease;
+        }
+        .project-nav .btn:hover {
+            box-shadow: 0 0 25px var(--main-color);
+        }
+        
+               
+        .project-details,
+        .project-nav {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+     
+        .project-details.is-visible,
+        .project-nav.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        .key-features {
+            opacity: 1;
+            transform: none;
+        }
 
 
 
@@ -945,6 +1246,12 @@ i {
 
 }
 
+        @media (max-width: 992px) {
+            .project-details-grid {
+                grid-template-columns: 1fr;
+                gap: 8rem;
+            }
+        }
 
 @media (max-width: 650px) {
     .kc-org-container {

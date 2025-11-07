@@ -1,3 +1,122 @@
+// functionality for accordion in tech stack in projects 
+const accordions = document.querySelectorAll('.tech-accordion');
+accordions.forEach(accordion => {
+    const header = accordion.querySelector('.tech-header');
+    
+    header.addEventListener('click', () => {
+        
+        accordions.forEach(otherAcc => {
+            if (otherAcc !== accordion) {
+                otherAcc.classList.remove('active');
+                otherAcc.querySelector('.tech-content').style.maxHeight = '0px';
+            }
+        });
+
+        
+        accordion.classList.toggle('active');
+        
+        const content = accordion.querySelector('.tech-content');
+        if (accordion.classList.contains('active')) {
+            
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            
+            content.style.maxHeight = '0px';
+        }
+    });
+});
+
+// this enables the fade-in effect in pages
+const sections = document.querySelectorAll('.project-hero, .project-details, .project-nav');
+const sidebarLinks = document.querySelectorAll('.project-sidebar a');
+
+
+const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        } else {
+           
+            entry.target.classList.remove('is-visible');
+        }
+    });
+}, { threshold: 0.1 }); 
+
+// sidebar in projects functionality
+const sidebarObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active-link');
+                if (link.getAttribute('href') === `#${entry.target.id}`) {
+                    link.classList.add('active-link');
+                }
+            });
+        }
+    });
+}, { 
+    rootMargin: '-50% 0px -50% 0px'
+});
+
+
+sections.forEach(section => {
+    
+    if (!section.id) {
+        if (section.classList.contains('project-details')) section.id = 'project-details';
+        if (section.classList.contains('key-features')) section.id = 'key-features';
+        if (section.classList.contains('project-hero')) section.id = 'project-hero';
+    }
+    
+    fadeInObserver.observe(section);
+    
+    if (section.id === 'project-hero' || section.id === 'project-details') {
+        sidebarObserver.observe(section);
+    }
+});
+
+            
+const keyFeaturesSection = document.querySelector('.key-features');
+if (keyFeaturesSection) {
+    keyFeaturesSection.id = 'key-features';
+    sidebarObserver.observe(keyFeaturesSection);
+}
+
+
+// parallax effect for background images
+function applyParallax() {
+    let section = document.querySelector('.key-features');
+    let parallaxBg = document.querySelector('.parallax-bg');
+    
+    if (!section || !parallaxBg) return;
+
+    let speed = 0.3; 
+
+    function updateParallax() {
+        let rect = section.getBoundingClientRect();
+        let offsetTop = rect.top + window.scrollY;
+        let scrollPosition = window.scrollY - offsetTop;
+
+       
+        parallaxBg.style.backgroundPositionY = -(scrollPosition * speed) + "px";
+    }
+
+    window.addEventListener("scroll", function() {
+        requestAnimationFrame(updateParallax);
+    });
+    
+    updateParallax();
+}
+
+
+function checkViewport() {
+    if (window.matchMedia("(min-width: 480px)").matches) {
+        applyParallax();
+    }
+}
+checkViewport();
+window.addEventListener("resize", checkViewport);
+
+
 // for clicking the toggle of menu in mobile and tablet devices
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -58,3 +177,4 @@ toggles.forEach((toggle) => {
         toggle.parentNode.classList.toggle("active");
     })
 })
+
