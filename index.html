@@ -11,6 +11,13 @@
 
 <body>
 
+    <div class="video-background-container">
+        <video autoplay muted loop playsinline id="home-video-bg">
+            <source src="small-vecteezy_abstract-plexus-tech-background-with-glowing-red-connecting_29157135_small (1).mp4" type="video/mp4"> <!-- Sourced from: https://www.vecteezy.com/free-videos/loop" by Vecteezy -->
+        </video> 
+        <div class="video-overlay"></div>
+    </div>
+    
     <header class="header">
 
         <a href="#home" class="logo">
@@ -70,19 +77,7 @@
 
     </section>
 
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="image.jpg" alt="">
-        </div>
-
-        <div class="about-content"> 
-            <h2>About <span>Me</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-            <a href="#" class="btn">Read More</a>
-        </div>
-    </section>
+   
 
     <section class="services" id="services">
 
@@ -178,6 +173,75 @@
 
         </div>
     </section>
+
+     <section class="about" id="about">
+        <div class="about-img">
+            <img src="image.jpg" alt="">
+        </div>
+
+        <div class="about-content"> 
+            <h2>About <span>Me</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+            
+    <section class="slider">
+            <div class="list">
+                <div class="item active">
+                    <div class="image" style="--url: url('img/1.jpg')"></div>
+                    <div class="content">
+                        <h2>DREAM DESTINATION: JAPAN</h2>
+                        <p>
+                            Nulla magna irure incididunt irure nisi laboris adipisicing adipisicing ad aliquip exercitation sit duis.
+                        </p>
+                        <p>
+                            Ex irure minim eiusmod tempor cillum consectetur ullamco.
+                        </p>
+                    </div>
+                </div>
+                <div class="item ">
+                    <div class="image" style="--url: url('img/2.jpg')"></div>
+                    <div class="content">
+                        <h2>DREAM DESTINATION: KOREA</h2>
+                        <p>
+                            Nulla magna irure incididunt irure nisi laboris adipisicing adipisicing ad aliquip exercitation sit duis.
+                        </p>
+                        <p>
+                            Ex irure minim eiusmod tempor cillum consectetur ullamco.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image" style="--url: url('img/3.jpg')"></div>
+                    <div class="content">
+                        <h2>DREAM DESTINATION: TAIWAN</h2>
+                        <p>
+                            Nulla magna irure incididunt irure nisi laboris adipisicing adipisicing ad aliquip exercitation sit duis.
+                        </p>
+                        <p>
+                            Ex irure minim eiusmod tempor cillum consectetur ullamco.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button id="prev">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+                    </svg>
+                </button>
+                <button id="next">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
 
     <section class="contact" id="contact"> 
         <h2 class="heading">Contact <span>Me</span></h2>
