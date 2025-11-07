@@ -291,6 +291,7 @@ section{
 .services {
     color: black;
     background: var(--second-bg-color);
+    min-height: auto;
 }
 
 .services h2 {
@@ -351,6 +352,7 @@ section{
 
 .projects {
     position: relative;
+    min-height: auto; 
 }
 
 .projects-box {
@@ -740,7 +742,7 @@ svg{
 }
 
 .faq-interview {
-    min-height: 80vh;
+    min-height: auto;
     background-color: var(--second-bg-color);
     display: flex;
     flex-direction: column;
@@ -965,7 +967,7 @@ i {
             box-sizing: border-box;
 
          
-            background-image: url('assets/img/destination-japan.webp'); 
+            background-image: url('assets/img/kc-best-sales-hero-background.webp'); 
             background-size: cover;
             background-position: center;
         }
@@ -976,7 +978,7 @@ i {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.6);
             z-index: 1;
         }
         .project-hero-content {
@@ -1094,7 +1096,7 @@ i {
         .tech-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease-out;
+            transition: max-height 0.5s ease-out;
         }
         .tech-content-inner {
             padding-top: 2rem;
@@ -1121,7 +1123,7 @@ i {
        
       
         .parallax-bg {
-            background-image: url('assets/img/kc-best-sales-background.jpg');
+           
             background-size: cover;
             background-position: center center; 
             background-repeat: no-repeat;
@@ -1132,6 +1134,10 @@ i {
             height: 140%; 
             z-index: 1;
             opacity: 0.9;
+        }
+
+        #key-features-bg{
+             background-image: url('assets/img/kc-best-sales-background.webp');
         }
         
        
