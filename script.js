@@ -178,3 +178,39 @@ toggles.forEach((toggle) => {
     })
 })
 
+
+// working mailto: 'my personal gmail' and then the filled content are automatically there in the email
+const contactForm = document.getElementById('contact-form');
+
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        
+        
+        e.preventDefault();
+        
+        
+        const recipientEmail = 'casipitkylechristian@gmail.com';
+        const recipientName = encodeURIComponent('Kc Casipit');
+        const name = document.getElementById('contact-name').value;
+        const email = document.getElementById('contact-email').value;
+        const phone = document.getElementById('contact-phone').value;
+        const subject = document.getElementById('contact-subject').value;
+        const message = document.getElementById('contact-message').value;
+
+        const body = `
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Message:
+${message}
+        `;
+
+        
+        const mailtoLink = `mailto:${recipientName}%20<${recipientEmail}>?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        
+        window.location.href = mailtoLink;
+    });
+}

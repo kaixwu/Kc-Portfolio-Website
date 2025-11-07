@@ -329,26 +329,25 @@
             </div>
         </section>
 
-
-    <section class="contact" id="contact"> 
+    <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
+        <form id="contact-form">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" id="contact-name" placeholder="Full Name" required> <input type="email" id="contact-email"
+                        placeholder="Email" required>
                 </div>
-               
+
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject ">
+                    <input type="number" id="contact-phone" placeholder="Phone Number" required> <input type="text"
+                        id="contact-subject" placeholder="Subject" required>
                 </div>
             </div>
-            
+
             <div class="input-group-2">
-                <textarea name="" id="" placeholder="Your Message" cols="30" rows="10"></textarea>
-                <input type="submit" value="Send Message" class="btn"> 
+                <textarea id="contact-message" placeholder="Your Message" cols="30" rows="10" required></textarea> <input
+                    type="submit" value="Send Message" class="btn">
             </div>
         </form>
     </section>
