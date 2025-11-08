@@ -948,6 +948,15 @@ svg{
     gap: 1rem;
 }
 
+/* Fix heading text overflow on mobile */
+.heading-walkthrough {
+    margin-top: 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .project-hero {
     height: 70vh;
     position: relative;
@@ -996,6 +1005,7 @@ svg{
     font-size: 2.2rem;
     font-weight: 300;
     margin-top: 1.5rem;
+    overflow-wrap: break-word;
 }
 
 .project-hero .btn {
@@ -1147,10 +1157,11 @@ svg{
 }
 
 .key-features {
-    padding: 10rem 15%;
+    padding: 10rem 15% 5rem 15%;
     background: var(--second-bg-color);
     position: relative; 
     overflow: hidden;
+    min-height: auto;
 }
 
 #key-features-bg {
@@ -1275,16 +1286,24 @@ svg{
     }
 
     .back-button-container {
-        top: 10rem;
+        top: 15rem;
         left: 5%;
     }
     
     .project-hero, .project-details, .key-features, .project-nav {
-        padding: 10rem 5%;
+        padding: 10rem 5% 5rem 5%;
+    }
+    
+    .key-features {
+        padding: 8rem 5% 4rem 5%;
     }
     
     .project-sidebar {
         display: none;
+    }
+    
+    .heading-walkthrough {
+        font-size: 5rem !important;
     }
 }
 
@@ -1316,6 +1335,27 @@ svg{
     
     .btn-group-about {
         flex-direction: column;
+    }
+    
+    .heading-walkthrough {
+        font-size: 3.5rem !important;
+        line-height: 1.2;
+    }
+    
+    .video-walkthrough-container {
+        margin-bottom: 0;
+    }
+    
+    .key-features {
+        padding: 6rem 5% 3rem 5%;
+    }
+
+    .project-hero-content .heading {
+        font-size: 4.3rem;
+    }
+
+    .project-subtitle {
+        font-size: 1.4rem;
     }
 }
 
