@@ -8,7 +8,6 @@ accordions.forEach(accordion => {
             const container = accordion.closest('.project-info-box, .faq-container');
             
             if (container) {
-                // Close all other accordions in the same container
                 container.querySelectorAll('.tech-accordion, .faq-accordion').forEach(otherAcc => {
                     if (otherAcc !== accordion) {
                         otherAcc.classList.remove('active');
@@ -18,7 +17,6 @@ accordions.forEach(accordion => {
                 });
             }
 
-            // Toggle current accordion
             accordion.classList.toggle('active');
             const content = accordion.querySelector('.tech-content, .faq-content');
             
@@ -36,14 +34,12 @@ const projectSections = document.querySelectorAll('.project-hero, .project-detai
 const sidebarLinks = document.querySelectorAll('.project-sidebar a');
 
 if (projectSections.length > 0) {
-    // Fade-in effect observer
     const fadeInObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             entry.target.classList.toggle('is-visible', entry.isIntersecting);
         });
     }, { threshold: 0.1 });
 
-    // Sidebar active link observer
     const sidebarObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && sidebarLinks.length > 0) {
@@ -56,9 +52,7 @@ if (projectSections.length > 0) {
         });
     }, { rootMargin: '-50% 0px -50% 0px' });
 
-    // Observe all project sections
     projectSections.forEach(section => {
-        // Assign IDs if missing
         if (!section.id) {
             if (section.classList.contains('project-details')) section.id = 'project-details';
             else if (section.classList.contains('key-features')) section.id = 'key-features';
@@ -69,7 +63,6 @@ if (projectSections.length > 0) {
         sidebarObserver.observe(section);
     });
 
-    // Ensure key-features section has ID
     const keyFeaturesSection = document.querySelector('.key-features');
     if (keyFeaturesSection && !keyFeaturesSection.id) {
         keyFeaturesSection.id = 'key-features';
@@ -113,7 +106,6 @@ function applyParallax() {
     });
 }
 
-// Check viewport and apply parallax
 function checkViewport() {
     if (window.matchMedia("(min-width: 480px)").matches) {
         applyParallax();
@@ -149,7 +141,6 @@ if (sliderItems.length > 0 && prevBtn && nextBtn) {
         
         sliderItems[active].classList.add('active');
         
-        // Show/hide navigation buttons
         prevBtn.classList.toggle('d-none', active === 0);
         nextBtn.classList.toggle('d-none', active === lastPosition);
     };
@@ -168,7 +159,7 @@ if (sliderItems.length > 0 && prevBtn && nextBtn) {
         }
     });
 
-    setSlider(); // Initialize
+    setSlider();
 }
 
 // ===== SLIDER DIAMETER CALCULATION =====
