@@ -49,5 +49,5 @@ This website uses several images and assets from around the web. All credit goes
 ### Parallax Backgrounds (from Unsplash)
 * https://unsplash.com/photos/black-remote-control-on-red-table-6sAl6aQ4OWI
 * https://unsplash.com/photos/black-computer-keyboard-DuHKoV44prg
-* httpsS://unsplash.com/photos/gray-laptop-computer-on-brown-wooden-desk-Agx5_TLsIf4
+* https://unsplash.com/photos/gray-laptop-computer-on-brown-wooden-desk-Agx5_TLsIf4
 * https://unsplash.com/photos/person-using-macbook-pro-on-table-NPWvH40Cn4I
